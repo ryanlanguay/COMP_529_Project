@@ -3,7 +3,7 @@ $srcExt = @('.js','.cpp','.c','.h')
 # Regex patterns for comments, functions, and objects in C++
 $commentPatterns = '/\**|//*|\*\**|\*/'
 $functionPattern = '.*\){*|.*\(`r`n{*'
-$objPattern = '.* *;'
+$objPattern = '.*class.*|.*struct.*;'
 # Get all source files in the src directory
 $srcFiles = Get-ChildItem "C:\firefox-49.0.2" -Recurse -File | Where-Object {$_.Extension -in $srcExt}
 $totalLines = 0
